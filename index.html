@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小票打印</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="searchtitle" content="1">
+    <meta name="title" content="1">
+    <meta name="description" content="1" />
+    <meta name="keywords" content="1" />
+    <style type="text/css">
+        body{
+            margin: 0px;
+            background-color: #000000;
+        }
+        .box{
+            width: 227px;
+            height: 673px;
+            background-color: white;
+        }
+        .top{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            text-align: center;
+            margin:0px 5px;
+            height: 100px;
+            border-bottom: 1px solid #000000;
+        }
+        .code{
+            padding-top: 10px;
+        }
+        .code img{
+            height: 50px;
+            width: 125px;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 19px;
+        }
+        .information{
+            margin:0px 5px;
+            height: 100px;
+            border-bottom: 1px solid #000000;
+            font-size: 12px;
+        }
+        .content{
+            display: flex;
+            justify-content: space-between;
+            height: 25px;
+            line-height: 25px;
+        }
+        .addres{
+            width: 47.5%;
+        }
+        .goods-content{
+            border-bottom: 1px solid #000000;
+        }
+        .goods{
+            margin:0px 5px;
+            height: 100px;
+            font-size: 12px;
+        }
+        .goods-top{
+            border-top: 1px solid #cccccc;
+        }
+        .money{
+            margin:0px 5px;
+            height: 50px;
+            font-size: 12px;
+            border-bottom: 1px dashed #cccccc;
+        }
+        .phone{
+            height: 25px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+        <!-- 头部-->
+        <div class="top">
+            <div class="code">
+                <img  src="data:image/png;base64,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
+">
+            </div>
+            <div class="title">
+                益丰长沙金州大道店
+            </div>
+        </div>
+       <!-- 收银-->
+        <div class="information">
+            <div class="content"><div>收银员：10318</div> <div>总计件数：12</div></div>
+            <div class="content"><div>姓名：Super</div> <div>电话：186700052683</div></div>
+            <div class="content"><div class="addres">收货地址：</div> <div>湖南省长沙市岳麓区金州大道68号2楼电商事业部</div></div>
+        </div>
+        <div class="goods-content">    
+            <div class="goods">
+            <div class="content"><div>品名：珍珠明目滴眼液0.2*80片</div></div>
+            <div class="content"><div>厂家：湖南益丰医药连锁股份有限公司</div></div>
+            <div class="content"><div>编码：104846</div><div>单价：5.00</div></div>
+            <div class="content"><div>数量：3</div><div>总计：25.00</div></div>
+            </div>
+            <div class="goods goods-top">
+                <div class="content"><div>品名：珍珠明目滴眼液0.2*80片</div></div>
+                <div class="content"><div>厂家：湖南益丰医药连锁股份有限公司</div></div>
+                <div class="content"><div>编码：104846</div><div>单价：5.00</div></div>
+                <div class="content"><div>数量：3</div><div>总计：25.00</div></div>
+            </div>
+        </div>
+        <div class="money">
+            <div class="content">应付金额：50.00</div>
+            <div class="content">实付金额：50.00</div>
+        </div>
+        <div class="phone">
+            <span>统一服务热线：40068871111</span>
+        </div>
+</div>
+</body>
+</html>

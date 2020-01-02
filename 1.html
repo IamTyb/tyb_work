@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"  />
+    <meta content="false" id="twcClient" name="twcClient" />
+    <meta content="yes" name="apple-mobile-web-app-capable"  />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- import Vue before Element -->
+    <link href="http://tb1.cn/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <link href="http://tb1.cn/css/swiper-3.4.2.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://tb1.cn/js/swiper-3.4.2.min.js"></script>
+    <title>测试</title>
+    <style>
+        .swiper-container{
+            width:100%;
+            height:5.5rem;
+        }
+        .swiper-container .swiper-slide img{
+            width:100%;
+            height:100%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            (function () {
+                var html = document.documentElement;
+                html.style.fontSize = 20 * html.clientWidth / 320 + 'px';
+                window.onresize = function () {
+                    html.style.fontSize = 20 * html.clientWidth / 320 + 'px';
+                };
+            })();
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                autoplay: 5000,
+                loop: true,
+            });
+        };
+    </script>
+</head>
+<body>
+<div id="app">
+    <div class="layout">
+        <div class="main">
+    <div class="column-title" onclick="userclick('益丰大药房旗舰店','41ztpj','580796300175701911','http://shop104821871.taobao.com/','title','5')">
+    <div class="topimage">
+        <img src="https://img.alicdn.com/sns_logo/T124BoFuhbXXb1upjX.jpg">
+    </div>
+
+    <div class="topimage">
+        <div class="topTitle">
+            <div class="topTip1">益丰大药房旗舰店</div>
+            <div class="topTip2">沪市主板首家上市药房</div>
+        </div>
+    </div>
+    <div class="topimage">
+        <div class="topicon">
+            〉
+        </div>
+    </div>
+    </div>
+
+    <div id="logistlist" style="height: 500px;overflow: hidden">
+        <img width="20px" height="20px" style="position: absolute;left: 15px;" src="/imgs/car.png">
+        <span id="carInfo" style="  position: relative;left: 40px">
+					顺丰速运<span style="font-size: 10px;">（单号：2912****9912）</span>
+        </span>
+        <ul>
+            <li class="topnews"><b></b><p>代签收(果农便利店 ),感谢使用顺丰,期待再次为您服务</p><span style="font-weight:normal;">12-05 12:41:00</span></li>
+            <li><b></b><p>快件交给麦文科，正在派送途中（联系电话：18902506679，顺丰已开启“脱敏呼叫”保护您的电话隐私，请放心接听）</p><span style="font-weight:normal;">12-05 09:37:00</span></li>
+            <li><b></b><p>快件到达 【湛江南油营业点】</p><span style="font-weight:normal;">12-05 08:31:00</span></li>
+        </ul>
+    </div>
+    <div class="ad-click">
+        <div id="showbut" onclick="javascript:hiddendiv();">加载更多</div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img  src="http://tb1.cn/img/7881a24d-ab93-4d9b-8f5e-cc194cde4422.jpg">
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+<style>
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    .column-title {
+        padding: 5px 0px;
+        background-color: #FF5400;
+        display: table;
+        width: 100%;
+    }
+    .column-title .topimage {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 5px;
+    }
+    .column-title .topicon {
+        float: left;
+        padding: 10px 0px;
+        font-weight: bold;
+        font-size: 22px;
+        color: #FFF;
+    }
+    .column-title .topTip1 {
+        padding: 2px 0px;
+        font-weight: bold;
+        font-size: 16px;
+        color: White;
+        word-break: break-all;
+    }
+    .column-title .topTip2 {
+        padding: 3px 0px;
+        font-size: 12px;
+        color: White;
+    }
+    .column-title .topimage img {
+        padding-top: 2px;
+        width: 50px;
+        height: 44px;
+    }
+
+
+
+    .el-carousel__item h3 {
+        color: #475669;
+        font-size: 14px;
+        opacity: 0.75;
+        line-height: 200px;
+        margin: 0;
+    }
+
+    .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+    }
+
+    .el-carousel__item:nth-child(2n+1) {
+        background-color: #d3dce6;
+    }
+</style>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aa: [
+                { url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576486941184&di=b58a07e97d502caf25500a915acafae3&imgtype=0&src=http%3A%2F%2Fpic.zhezhier.com%2Fupload%2Fd%2Fc0%2Fdc00f19b2a5659ad6292de15e58b29f1.jpg'},
+                { url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576486941184&di=b58a07e97d502caf25500a915acafae3&imgtype=0&src=http%3A%2F%2Fpic.zhezhier.com%2Fupload%2Fd%2Fc0%2Fdc00f19b2a5659ad6292de15e58b29f1.jpg'},
+                { url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576486941184&di=b58a07e97d502caf25500a915acafae3&imgtype=0&src=http%3A%2F%2Fpic.zhezhier.com%2Fupload%2Fd%2Fc0%2Fdc00f19b2a5659ad6292de15e58b29f1.jpg'},
+                { url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576486941184&di=b58a07e97d502caf25500a915acafae3&imgtype=0&src=http%3A%2F%2Fpic.zhezhier.com%2Fupload%2Fd%2Fc0%2Fdc00f19b2a5659ad6292de15e58b29f1.jpg'},
+
+            ],
+        },
+        methods: {
+            save:function(index){
+                alert(index);
+            }
+        }
+    })
+</script>
+</body>
+</html>

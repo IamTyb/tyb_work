@@ -1,0 +1,25 @@
+<html>
+<title></title>
+<head></head>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<body>
+
+<script>
+    $.ajax({
+        url:'https://sp0.baidu.com/9_Q4sjW91Qh3otqbppnN2DJv/pae/channel/data/asyncqury?cb=jQuery110206202314919942864_1576482979230&appid=4001&com=yuantong&nu=YT9074017213295&vcode=&token=&_=1576482979241',
+        type:"GET",
+        dataType:"jsonp",
+        jsonp: true,
+        jsonpCallback: "jQuery110206202314919942864_1576482979230", //这里的值需要和回调函数名一样
+        success:function(data){
+            console.log("Script loaded and executed.");
+            console.log(data);
+        },
+        error:function (textStatus) { //请求失败后调用的函数
+            console.log(JSON.stringify(textStatus));
+        }
+    });
+</script>
+
+</body>
+</html>

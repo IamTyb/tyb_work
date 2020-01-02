@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var xhr = new XMLHttpRequest(); // IE8/9需用window.XDomainRequest兼容
+
+    // 前端设置是否带cookie
+    xhr.withCredentials = true;
+
+    xhr.open('post', 'https://sp0.baidu.com/9_Q4sjW91Qh3otqbppnN2DJv/pae/channel/data/asyncqury?cb=1&appid=4001&com=yuantong&nu=YT9074017213295&vcode=&token=&_=1576482979241', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('user=admin');
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+        }
+    };
+</script>
+</html>

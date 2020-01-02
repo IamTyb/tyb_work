@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>集客CRM</title>
+    <link href="http://tb1.cn/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="http://tb1.cn/css/swiper-3.4.2.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://tb1.cn/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="http://tb1.cn/js/swiper-3.4.2.min.js"></script>
+    <script type="text/javascript" src="http://tb1.cn/js/logistics.js"></script>
+    <style>
+        .swiper-container{
+            width:100%;
+            height:5.5rem;
+        }
+        .swiper-container .swiper-slide img{
+            width:100%;
+            height:100%;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            (function () {
+                var html = document.documentElement;
+                html.style.fontSize = 20 * html.clientWidth / 320 + 'px';
+                window.onresize = function () {
+                    html.style.fontSize = 20 * html.clientWidth / 320 + 'px';
+                };
+            })();
+
+            var mySwiper = new Swiper ('.swiper-container', {
+                autoplay: 5000,
+                loop: true,
+            });
+        };
+    </script>
+</head>
+<body>
+<div class="layout">
+    <div class="main">
+        <div class="column-title"  onclick="userclick('益丰大药房旗舰店','41ztpj','580796300175701911','http://shop104821871.taobao.com/','title','5')">
+            <div class="topimage">
+                <img src="https://img.alicdn.com/sns_logo/T124BoFuhbXXb1upjX.jpg"></img>
+            </div>
+            <div class="topimage">
+                <div class="topTitle">
+                    <div class="topTip1">益丰大药房旗舰店</div>
+                    <div class="topTip2">沪市主板首家上市药房</div>
+                </div>
+            </div>
+            <div class="topimage">
+                <div class="topicon">
+                    〉
+                </div>
+            </div>
+        </div>
+        <!--  <div style=" height: 10px; background-color: #D4D7D2;"></div> -->
+        <!--   <div class="first-Num">
+            <div class="title">物  流  信  息</div>
+            <div>
+		        <div class="numble"><div>物流公司：</div>顺丰速运</div>
+		        <div class="numble"><div>运单号码：</div>2912****9912</div>
+	        </div>
+        </div> -->
+        <div id="logistlist">
+            <img width="20px" height="20px" style="position: absolute;left: 15px;" src="/imgs/car.png"/>
+            <span id="carInfo" style="  position: relative;left: 40px">
+					顺丰速运<span style="font-size: 10px;">（单号：2912****9912）</span>
+           		</span>
+            <ul>
+                <li class="topnews"><b></b><p>代签收(果农便利店 ),感谢使用顺丰,期待再次为您服务</p><span style="font-weight:normal;">12-05 12:41:00</span></li>
+                <li><b></b><p>快件交给麦文科，正在派送途中（联系电话：18902506679，顺丰已开启“脱敏呼叫”保护您的电话隐私，请放心接听）</p><span style="font-weight:normal;">12-05 09:37:00</span></li>
+                <li><b></b><p>快件到达 【湛江南油营业点】</p><span style="font-weight:normal;">12-05 08:31:00</span></li>
+                <li><b></b><p>快件在【湛江麻章集散点】已装车,准备发往 【湛江南油营业点】</p><span style="font-weight:normal;">12-05 07:11:00</span></li>
+                <li><b></b><p>快件到达 【湛江麻章集散点】</p><span style="font-weight:normal;">12-05 05:45:00</span></li>
+                <li><b></b><p>快件在【江门杜阮中转场】已装车,准备发往 【湛江麻章集散点】</p><span style="font-weight:normal;">12-04 16:25:00</span></li>
+                <li><b></b><p>快件到达 【江门杜阮中转场】</p><span style="font-weight:normal;">12-04 15:27:00</span></li>
+                <li><b></b><p>快件在【中山东升中转场】已装车,准备发往 【中山东升中转场】</p><span style="font-weight:normal;">12-04 12:38:00</span></li>
+                <li><b></b><p>快件到达 【中山东升中转场】</p><span style="font-weight:normal;">12-04 11:46:00</span></li>
+                <li><b></b><p>快件在【长沙星沙集散中心】已装车,准备发往 【中山东升中转场】</p><span style="font-weight:normal;">12-03 22:46:00</span></li>
+                <li><b></b><p>快件到达 【长沙星沙集散中心】</p><span style="font-weight:normal;">12-03 22:30:00</span></li>
+                <li><b></b><p>快件在【长沙市芙蓉区集收客户营业部】已装车,准备发往 【长沙星沙集散中心】</p><span style="font-weight:normal;">12-03 16:23:00</span></li>
+                <li><b></b><p>顺丰速运 已收取快件</p><span style="font-weight:normal;">12-03 16:22:00</span></li>
+                <li><b></b><p>包裹正在等待揽收</p><span style="font-weight:normal;">12-03 09:01:57</span></li>
+            </ul>
+        </div>
+        <div class="ad-click">
+            <div id="showbut" onclick="javascript:hiddendiv();">加载更多</div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img onclick="userclick('益丰大药房旗舰店','41ztpj','580796300175701911','http://tb.cn/3D0E5Ky','ad','5')" src="http://tb1.cn/img/7881a24d-ab93-4d9b-8f5e-cc194cde4422.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var adshow = document.getElementById("adshow");
+        var adshowhight = 0;
+        var topadshowhight= 0;
+        if(adshow)
+        {
+            adshow.setAttribute("style", "height:" + adshow.offsetWidth * 0.28 + "px;");
+            adshowhight = adshow.width* 0.28;
+        }
+
+        var topadshow = document.getElementById("topadshow");
+
+        if(topadshow)
+        {
+            topadshow.setAttribute("style", "height:" + topadshow.offsetWidth * 0.33 + "px;");
+            topadshowhight= topadshow.offsetWidth* 0.33;
+        }
+
+        var infoH = document.documentElement.clientHeight -130-adshowhight  -topadshowhight ;
+
+        var info = document.getElementById("logistlist");
+        if(document.getElementById("showbut")){
+            info.setAttribute("style","height:"+infoH+"px;overflow:hidden;");
+        }
+    </script>
+
+    <div class="blank"></div>
+    <div class="footer">
+        <div class="copyright">
+            COPYRIGHT&copy; 集客CRM
+        </div>
+    </div>
+    <script type="text/javascript">
+        function hiddendiv() {
+            if (document.getElementById("logistlist").getAttribute("style") == "height:"+infoH+"px;overflow:hidden;") {
+                document.getElementById("logistlist").setAttribute("style", "height:100%;overflow:hidden;");
+                document.getElementById("showbut").innerHTML = "点击收起";
+            } else {
+                document.getElementById("logistlist").setAttribute("style", "height:"+infoH+"px;overflow:hidden;");
+                document.getElementById("showbut").innerHTML = "加载更多";
+         }};
+        
+    </script>
+</div>
+</body>
+</html>

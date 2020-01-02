@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"  />
+    <meta content="false" id="twcClient" name="twcClient" />
+    <meta content="yes" name="apple-mobile-web-app-capable"  />
+    <title>选择活动</title>
+    <script src="vue/vue.js"></script>
+</head>
+<style type="text/css">
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    .content{
+        text-align:center;
+        width: 100%;
+    }
+    .title{
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-size: 20px;
+    }
+
+    .first{
+        border-top: 1px  solid #cccccc;
+        height: 60px;
+        line-height: 60px;
+    }
+    .hr{
+        height: 1px;
+        background-color: #cccccc
+    }
+    .second{
+        height: 60px;
+        line-height: 60px;
+        border-bottom:1px solid #cccccc;
+    }
+    /*.first:hover{*/
+    /*    background-color: blue;*/
+    /*}*/
+    /*.second:hover{*/
+    /*    background-color: red;*/
+    /*}*/
+</style>
+<body>
+<div class="content" id="app">
+    <div class="title">
+        选择活动
+    </div>
+    <div class="center">
+    <div class="first" @click="goAddOrder('1')">
+        双十一内购会
+    </div>
+    <div class="hr"></div>
+    <div class="second" @click="goAddOrder('2')">
+        破损商品内购
+    </div>
+    </div>
+</div>
+</body>
+<script type="application/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+        },
+        methods: {
+            goAddOrder:function (type){
+                window.location.href="add_order.html?type="+type;
+            },
+        }
+    })
+</script>
+</html>
