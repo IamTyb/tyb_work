@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"  />
+    <meta content="false" id="twcClient" name="twcClient" />
+    <meta content="yes" name="apple-mobile-web-app-capable"  />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>录入商品</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="vant/css/index.css">
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script src="vant/js/vue.min.js"></script>
+    <script src="vant/js/vant.min.js"></script>
+</head>
+<style type="text/css">
+    .frame{
+        margin: 15px 20px;
+        display: flex;
+        flex-direction:column;
+    }
+    .phone{
+        margin-bottom: 20px;
+        height: 22px;
+        line-height: 22px;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .phone input{
+        height: 22px;
+        font-size: 12px;
+        width: 80%;
+        padding-left:6px;
+    }
+    .phone span img{
+        vertical-align:middle;
+        height: 22px;
+        width: 22px;
+    }
+    .code div{
+        display: flex;
+        flex-direction:row;
+        font-size: 12px;
+    }
+    .radio-style{
+        padding-left: 5px
+    }
+    .vant-div{
+        width: 47%;
+    }
+    .code-div{
+        width: 53%;
+    }
+    .code-div input{
+        padding-left: 6px;
+        height: 22px;
+        width: 100%;
+    }
+    .table-external{
+        margin: 0px 8px;
+    }
+    .table {
+        font-size: 15px;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .turn{
+        word-break: break-all;
+    }
+    table
+    {
+        border-collapse:collapse;
+    }
+    th{
+        background-color: rgb(249,250,252);
+    }
+    td{
+        text-align: center;
+    }
+    table, td, th
+    {
+        font-size: 12px;
+        height: 30px;
+        border:1px solid #cccccc;
+    }
+    .delivery{
+        display: flex;
+        flex-direction:row;
+        font-size: 12px;
+    }
+    .delivery-title{
+        padding-top:2px;
+       padding-right: 10px;
+    }
+    .delivery div{
+        vertical-align:middle;
+        display: flex;
+        flex-direction:row;
+        font-size: 12px;
+    }
+    .delivery-first-radio-style{
+        padding-left: 0px;
+    }
+    .delivery-radio-style{
+        padding-left: 8px;
+    }
+    .compute{
+        margin: 130px 8px  0px 8px ;
+        font-size: 14px;
+    }
+    .compute-call{
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .compute-num{
+        padding-right: 20px;
+    }
+    .payment{
+        text-align: center;
+    }
+    .payment button{
+        margin-top: 20px;
+        width: 200px;
+    }
+    .compute-num-total{
+        font-size: 20px;
+        padding-right: 20px;
+        color: rgb(255,153,0);
+    }
+</style>
+<body>
+<div id="app">
+        <div>
+            <van-nav-bar
+                    title="录入商品"
+                    left-text="返回"
+                    left-arrow
+                    @click-left="goBack"
+    />
+    </div>
+    <div class="frame">
+        <div class="phone">
+            <input type="text" placeholder="手机号/卡号"/>
+            <span><img src="img/line.png"/></span>
+        </div>
+        <div class="code">
+            <div>
+            <van-radio-group v-model="radio" class="vant-div">
+                <van-radio name="1">条码</van-radio>
+                <van-radio name="2" class="radio-style" >编码/名称</van-radio>
+            </van-radio-group>
+            <div class="code-div">
+             <input type="text" placeholder="商品条码"/>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-external">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th width="50%">商品名称</th>
+                <th width="28%">数量</th>
+                <th width="12%">价格</th>
+                <th width="10%">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>维生素C片11111</td>
+                <td><van-stepper button-size="20px" v-model="value" integer /></td>
+                <td><input style="width: 50px" type="text"></td>
+                <td class="turn"><van-icon size="20" name="delete" /></td>
+            </tr>
+            <tr>
+                <td class="turn">维生素C片11111</td>
+                <td class="turn"><van-stepper  button-size="20px" v-model="value" integer /></td>
+                <td class="turn"><input style="width: 50px" type="text"></td>
+                <td class="turn"><van-icon  size="20" name="delete" /></td>
+            </tr>
+            <tr>
+                <td>维生素C片11111</td>
+                <td><van-stepper button-size="20px" v-model="value" integer /></td>
+                <td><input style="width: 50px" type="text"></td>
+                <td><van-icon size="20" name="delete"  /></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="delivery">
+        <span class="delivery-title">配货方式：</span>
+        <van-radio-group v-model="delivery" >
+            <van-radio name="1" class="delivery-first-radio-style">现场取货</van-radio>
+            <van-radio name="2" class="delivery-radio-style" >快递发货</van-radio>
+            <van-radio name="3" class="delivery-radio-style" >送货上门</van-radio>
+        </van-radio-group>
+        </div>
+    </div>
+    <div class="compute">
+        <div class="compute-call"><span>数量：</span><span class="compute-num">3</span></div>
+        <div class="compute-call"><span>商品金额：</span ><span class="compute-num">￥36</span></div>
+        <div class="compute-call"><span>优惠合计：</span><span class="compute-num">￥0</span></div>
+        <div class="compute-call"><span>应收金额：</span><span class="compute-num-total">￥36</span></div>
+        <div class="payment"><van-button type="info">付款</van-button></div>
+    </div>
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            radio:'1',
+            delivery:'1',
+            value: ''
+        },
+        created() {
+        },
+        methods: {
+            test:function(){
+                let type = this.getUrlParam('type');
+            },
+            //获取地址栏参数
+            getUrlParam:function (variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(false);
+            },
+            goBack:function() {
+                window.history.back();
+            },
+        }
+    });
+
+</script>
+</html>

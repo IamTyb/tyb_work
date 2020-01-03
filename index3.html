@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+    <style type="text/css">
+    body{
+        margin: 0px;
+    }
+    .content{
+      display: flex;
+      justify-content:center;
+      width: 280px;
+    }
+    .btn-one{
+     width: 80px;
+     height: 80px;
+     border-radius:50%;
+     background-color: red;
+   }
+   .line{
+     display: flex;
+   }
+   .line-left{
+    margin-left: -25px;
+    width:140px;
+    border-bottom:2px solid #000000;
+    transform: rotate(-30deg);
+    transform-origin: right;
+   }
+   .line-mid{
+         margin-left: 25px;
+          width:50px;
+           border-bottom:2px solid #000000;
+           transform: rotate(90deg);
+           transform-origin: left;
+   }
+   .line-right{
+           width:100px;
+           margin-left: -25px;
+           border-bottom:2px solid #000000;
+           transform: rotate(30deg);
+           transform-origin: left;
+   }
+
+   .top-view{
+     margin-left: 50px;
+   }
+   .btn-bottom{
+     margin-top: 50px;
+     display: flex;
+     justify-content:space-between;
+     width: 240px;
+     margin-left: -40px;
+   }
+   .btn-view{
+     width: 60px;
+     height: 30px;
+     line-height: 30px;
+     text-align: center;
+     background-color: red;
+   }
+
+    </style>
+</head>
+<body>
+  <div id="app"> 
+    <div style="display: flex;">
+      <div class="top-view">
+      <div>
+      <div class="content">
+      <div class="btn-one"></div>
+      </div>
+      <div class="line">
+      <div class="line-left"></div>
+      <div class="line-mid"></div>
+      <div class="line-right"></div>
+      </div>
+    </div>
+      <!-- <div class="btn-bottom">
+          <div class="btn-view">1</div>
+          <div>2</div>
+          <div>2</div>
+      </div> -->
+    </div>
+ 
+  </div>
+</body>
+</html>
